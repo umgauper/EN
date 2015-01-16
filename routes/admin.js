@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var util = require('util');
 var fs = require('fs');
+var extend = require('extend');
 
 router.imgName = '';
 /* GET admin page */
@@ -10,20 +11,45 @@ router.get('/', function(req, res) {
 });
 
 router.post("/", function(req, res, next){
-    if (req.files) {
-        console.log(util.inspect(req.files));
-        if (req.files.myFile.size === 0) {
-            return next(new Error("Hey, first would you select a file?"));
+        //console.log(util.inspect(req.files)); //TODO: add code to handle when files, title, or description is missing.
+
+
+    fs.readFile('./data/itemInfo.json', 'utf8', function(err, data) {
+        if (err) {
+            throw err;
         }
-        fs.exists(req.files.myFile.path, function(exists) {
-            if(exists) {
-                router.imgName = (util.inspect(req.files.myFile.name));
-                res.end("Got your file!");
-            } else {
-                res.end("Well, there is no magic for those who don’t believe in it!");
+
+        var itemInfo = JSON.parse(data);
+        var newItem = {};
+        var title = req.body.title;                 /*Parse out title and description from posted form, and save as properties on newItem object*/
+        newItem[title] = {};
+        newItem[title].description = req.body.description;
+        newItem[title].photos = [];
+
+        function addPhotos() {                     /*Add uploaded photos to photos array*/
+            var allFiles = req.files.myFile;
+            if (req.files.myFile.length > 0) {
+                allFiles.forEach(function (file) {
+                    newItem[title].photos.push(file.name);
+                });
             }
+            else {
+
+            }
+        }
+
+        if (req.files.myFile) {
+            addPhotos();
+        }
+        extend(itemInfo, newItem); /*extend current JSON with newItem object*/
+        console.log(itemInfo);
+        fs.writeFile('./data/itemInfo.json', JSON.stringify(itemInfo), function () { /*Write extended object to JSON file*/
+            res.end();
+
         });
-    }
+
+    });
 });
+
 
 module.exports = router;
