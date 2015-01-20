@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  // TODO: add validation to form...min and maxwidth for description and title, and at least 1 photo, max 10 ?? //
   h1 Welcome to the admin page
   form#fileUpload(method="post" action="/admin" enctype="multipart/form-data")
     label Select a file to upload:
