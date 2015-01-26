@@ -1,34 +1,80 @@
-img {
-    border: 2px solid red;
-    height: 300px;
+.slider-wrap {
+    border: 10px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgb(211, 211, 211) 10px 10px 0 0;
 }
 
 .wallop-slider {
-    width: 50%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.wallop-slider__list {
+.wallop-slider__list { /* The ul containing the li of imgs */
     list-style: none;
+    width: 100%;
+    height: 400px; /*TODO: doesnt work as %....adjust responsive design accordingly?? how??*/
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     overflow: hidden;
 }
 
-.wallop-slider__item {
-    display: none;
+.wallop-slider__item { /*TODO: get landscaped images to center vertically!*/
+    height: 400px;
+    width: 100%;
+    line-height: 400px;
+    display: none; /*don't change*/
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
 }
 .wallop-slider__item img {
+    border: 5px solid red;
     display: block;
     width: 100%;
+    vertical-align: middle;
 }
 
 .wallop-slider__item--current {
     display: block;
     position: static;
 }
+.buttons {
+    width: 75px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn--previous {
+    width: 33px;
+    height: 33px;
+    background: url(icons/controls.png) 0 -32px;
+    background-repeat: no-repeat;
+}
+
+.btn--next {
+    width: 33px;
+    height: 33px;
+    background: url(icons/controls.png) -43px -32px;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+
+.btn--previous:hover {
+    height: 33px;
+    width: 33px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.btn--next:hover {
+    height: 33px;
+    width: 33px;
+    background-position: -43px 0;
+    background-repeat: no-repeat;
+}
+
 
 /*==========  SPECIAL CONFIG  ==========*/
 .wallop-slider--rotate .wallop-slider__item--hide-previous,

@@ -1,7 +1,12 @@
 angular.module('wallopSlider', [])
     .directive('wallopSlider', function () {
     return {
-        template: '<div class="wallop-slider {{animationClass}}"><ul class="wallop-slider__list"><li class="wallop-slider__item {{itemClasses[$index]}}" ng-repeat="i in images"><img src="images/{{i}}"></li></ul><button ng-show="images.length>1" class="st-button wallop-slider__btn wallop-slider__btn--previous btn btn--previous" ng-disabled="prevDisabled" ng-click="onPrevButtonClicked()">Previous</button><button ng-show="images.length>1" class="st-button wallop-slider__btn wallop-slider__btn--next btn btn--next" ng-disabled="nextDisabled" ng-click="onNextButtonClicked()">Next</button></div>',
+        template: '<div class="wallop-slider {{animationClass}}">' + '' +
+                    '<ul class="wallop-slider__list">' +
+                        '<li class="wallop-slider__item {{itemClasses[$index]}}" ng-repeat="i in images">' +
+                        '<img src="images/{{i}}"></li></ul>' + '<div class="buttons">' +
+                        '<button ng-show="images.length>1" class="st-button wallop-slider__btn wallop-slider__btn--previous btn btn--previous" ng-disabled="prevDisabled" ng-click="onPrevButtonClicked()">' +
+        '</button><button ng-show="images.length>1" class="st-button wallop-slider__btn wallop-slider__btn--next btn btn--next" ng-disabled="nextDisabled" ng-click="onNextButtonClicked()"></button></div></div>',
         restrict: 'EA',
         transclude: true,
         replace: false,

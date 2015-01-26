@@ -10,6 +10,7 @@ var multer = require('multer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var admin = require('./routes/admin');
+var upload = require('./routes/upload');
 
 var app = express();
 // start the server
@@ -29,6 +30,7 @@ app.use(multer({dest: './public/images/'}))
 app.use('/', routes);
 app.use('/users', users);
 app.use('/admin', admin);
+app.use('/upload', upload);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

@@ -7,3 +7,22 @@
     background-size: 100% 100%;
     background-color: indianred;
 }
+
+
+
+.css-form input.ng-pristine, textarea.ng-pristine {
+    background-color: blueviolet;
+}
+
+.css-form textarea.ng-dirty{
+    background-color: lightcyan;
+
+}
+
+input[type=text].ng-valid {
+    background-color: greenyellow;
+}
+
+input[type=text].ng-invalid, textarea.ng-invalid {
+background-color: red;
+}
