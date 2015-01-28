@@ -5,7 +5,7 @@
 * update layout of admin page
 * fix rendering of response after submit is clicked & add link to go back to add more items
 * ~~add drop-down select for admin page for refrigeration vs. non-refrigeration~~
-* ~~add price input ~~
+* ~~add price input~~
 * **add angular tab for non-refrigeration, and filter for that**
 
 * add /delete route for deleting item & photos
