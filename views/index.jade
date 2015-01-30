@@ -2,64 +2,34 @@ extends layout
 block content
     //TODO: fix margins of header and body ... my page has smaller margin than Bootstrap's demo for some reason...
     // Navigation
-
-    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
-        .container
-            // Brand and toggle get grouped for better mobile display
-            .navbar-header
-                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                a.navbar-brand(href='#') Start Bootstrap
-            // Collect the nav links, forms, and other content for toggling
-            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                ul.nav.navbar-nav
-                    li
-                        a(href='#') About
-                    li
-                        a(href='#') Services
-                    li
-                        a(href='#') Contact
-            // /.navbar-collapse
-        // /.container
+    div.banner
     .container(ng-controller="myController")
         div
         // Page Heading
         .row
             .col-lg-12
-                h1.page-header
-                    Page Heading
-                small Secondary Text
+                h2.page-header
+                    Page
+                        #[span.welcome Welcome] to Cool Stuff Plus. We specialize in smaller capacity refrigeration equipment and accessories for your household and business refrigeration. Check out our selection of beverage dispensing equipment.
         // /.row
-
-        row(ng-repeat="item in items")
-        // Pagination
-        .row.text-center
+        hr.break
+        .row
             .col-lg-12
-                ul.pagination
-                    li
-                        a(href='#') &laquo;
-                    li.active
-                        a(href='#') 1
-                    li
-                        a(href='#') 2
-                    li
-                        a(href='#') 3
-                    li
-                        a(href='#') 4
-                    li
-                        a(href='#') 5
-                    li
-                        a(href='#') &raquo;
-        // /.row
-        hr
+                h1#forSale FOR SALE
+        .row
+            .col-lg-12
+                ul.panel
+                    li(ng-click="selected='refrig'" ng-class="{active: selected === 'refrig'}") Refrigeration
+                    li(ng-click="selected='non-refrig'" ng-class="{active: selected === 'non-refrig'}") Other
+        row(ng-show="selected=='refrig'" ng-repeat="item in items | filter:{isRefrig: true}")
+        row(ng-show="selected=='non-refrig'"  ng-repeat="item in items | filter:{isRefrig: false}")
+
+
         // Footer
         footer
             .row
                 .col-lg-12
-                    p Copyright &copy; Your Website 2014
+                    p Copyright &copy; Cool Stuff Plus 2015
             // /.row
     // /.container
     // Bootstrap Core JavaScript

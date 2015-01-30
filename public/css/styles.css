@@ -1,14 +1,126 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700);
+
+/* Index Styles */
+body {
+    font-family: Roboto, sans-serif;
+    background-color: rgb(240, 240, 240);
+    color: rgb(16, 16, 16);
+}
+
 .banner {
     height: 300px;
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin-top: -20px;
     background: url('../images/sodas_edit.jpg') no-repeat;
     background-size: 100% 100%;
-    background-color: indianred;
+}
+.navbar {
+    background-color: #A5BED9;
+}
+a.navbar-brand {
+    color: #161616 !important;
+    font-size: 2em;
+    font-weight: bold;
 }
 
+.navbar a {
+    color: #161616 !important;
+}
 
+.navbar li a:hover {
+    color: white !important;
+}
+
+hr.break {
+    border: 1px solid #474747;
+}
+
+span.welcome {
+    width:75%;
+    font-size: 150%;
+    font-weight: 500;
+}
+
+h1#forSale {
+    font-size: 60px;
+    font-weight:bold;
+    width:50%;
+    margin: 0 auto;
+    text-align:center;
+    letter-spacing:5px;
+}
+
+ul.panel li { /* TODO add responsive styles for the panel */
+    background-color: #D3D3D3;
+    padding: 20px 50px;
+    line-height: 200px;
+    border: 10px solid transparent;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 25px;
+    display: inline;
+}
+
+ul.panel li:first-of-type {
+    margin-right: 40px;
+
+}
+
+ul.panel li.active {
+    background-color: white;
+}
+
+ul.panel {
+    padding: 0;
+    height: 200px;
+    width: 505px;
+    background-color: transparent;
+}
+
+.item-info {
+    text-align: right;
+    padding-right: 6%;
+}
+
+.item-info h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.item-info p {
+    font-size: 1.2em;
+}
+
+p.price {
+    font-weight: bold;
+}
+
+.slider-wrap {
+    background-color: white;
+}
+
+/* Footer Styles */
+
+/*footer {*/    /*TODO add footer styles*/
+    /*border-top: 10px solid #A5BED9;*/
+    /*background-color: #575F68;*/
+    /*border-bottom: 10px solid #383838;*/
+    /*width: 100%;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+/*}*/
+
+/* About Page Styles */
+#about {
+    font-size: 1.5em;
+    margin-top: 5%;
+}
+#forest {
+    border: 10px solid transparent;
+    border-radius: 50px;
+}
+/* Form Validation Styles*/
 
 .css-form input.ng-pristine, textarea.ng-pristine {
     background-color: blueviolet;

@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    .row(ng-controller="myController")
+        .col-lg-10(ng-repeat="item in items")
+            p {{item.title}}
+            button(ng-model="item.title" ng-click="itemDelete(item.title)") sooo freaking cool!

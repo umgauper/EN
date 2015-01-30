@@ -20,21 +20,22 @@ angular.module('formControl', [])
             if($scope.files === undefined) {
                 alert("You must select at least 1 file!")
             }
-            else if(validity) {
+            else if (validity) {
                 var fd = new FormData();
                 fd.append('title', form.title);
                 fd.append('description', form.description);
                 fd.append('isRefrig', form.refrigerated || true);
                 fd.append('price', form.price);
-                angular.forEach($scope.files, function(file) {
+                angular.forEach($scope.files, function (file) {
                     fd.append('file', file)
                 });
                 $http.post('/upload', fd,
-                    { transformRequest: angular.identity,
-                      headers: {'Content-Type': undefined}
+                    {
+                        transformRequest: angular.identity,
+                        headers: {'Content-Type': undefined}
                     }
                 )
-                    .success(function(d) {
+                    .success(function (d) {
                         console.log(d);
                     })
             }

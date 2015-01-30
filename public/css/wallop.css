@@ -31,9 +31,8 @@
     left: 0;
 }
 .wallop-slider__item img {
-    border: 5px solid red;
     display: block;
-    width: 100%;
+    width: 90%;
     vertical-align: middle;
 }
 
