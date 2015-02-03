@@ -4,6 +4,11 @@ var util = require('util');
 var fs = require('fs');
 var extend = require('extend');
 
+router.get('/', function(req, res, next) {
+    res.render('upload', {title: "Upload"});
+
+});
+
 router.post('/', function(req, res, next) { // re-add part for appending data to JSON file.. and image resize!
 
     fs.readFile('public/data/itemInfo.json', 'utf8', function(err, data) {

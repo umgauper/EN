@@ -9,6 +9,5 @@ router.get('/', function(req, res) {
     res.render('about', {title: 'About'});
 });
 
-//TODO: add DELETE method for removing items from itemInfo.json! maybe list out each object in items array ... with DELETE button? on /delete route
 
 module.exports = router;

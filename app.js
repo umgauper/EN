@@ -12,7 +12,7 @@ var about = require('./routes/about');
 var admin = require('./routes/admin');
 var upload = require('./routes/upload');
 var adminDelete = require('./routes/adminDelete');
-var deleteItem = require('./routes/deleteItem'); /* TODO change this awful naming*/
+var deleteItem = require('./routes/deleteItem');
 
 var app = express();
 // start the server

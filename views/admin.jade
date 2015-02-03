@@ -1,27 +1,10 @@
 extends layout
-
 block content
-  // TODO: add validation to form...min and maxwidth for description and title, and at least 1 photo, max 10 ??
-  h1 Administration
-  div.container(ng-app="formApp")
-    div.col-lg-offset-4 {{name}}
-
-        form#fileUpload(name="adminForm" ng-submit="submitted = true; submit(form, adminForm.$valid)" class="css-form" ng-controller="formControl" novalidate)  {{file.name}} {{form.refrigerated}}
-          label Select the files to upload:
-          input(type="file" name="files" file-input="files" multiple)
-          // see bookmarked stackoverflow re: custom directive for file validation! and for uploading the data, see egghead.io //
-          label Item Name
-          input(type="text" name="title"  ng-minlength="3" ng-maxlength="35" ng-model="form.title" required)
-          label Price
-          input(type="text" name="price" ng-pattern="/^[0-9]+/" ng-model="form.price" required)
-          label Yes
-          input(type="radio" name="itemOrg" value="true" ng-checked="true" ng-model="form.refrigerated")
-          label No
-          input(type="radio" name="itemOrg" value="false" ng-model="form.refrigerated")
-          div(ng-if="adminForm.title.$error.required && submitted") You must enter a title!
-          label Description
-          textarea(rows="4" cols="50" name="description" ng-minlength="10" ng-maxlength="500" ng-model="form.description" required)
-          br
-          input(type="submit" value="Submit")
-
-          //TODO: add angular verification for title, textarea, and files, and confirmation before Submit button
+  .container
+    .row.admin
+        .col-lg-4
+            a(href="/upload") UPLOAD
+            p Upload an item for sale
+        .col-lg-4
+            a(href="/delete") DELETE
+            p Delete a sold item

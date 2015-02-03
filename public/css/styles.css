@@ -114,27 +114,53 @@ p.price {
 /* About Page Styles */
 #about {
     font-size: 1.5em;
-    margin-top: 5%;
+    margin-top: 15%;
 }
 #forest {
     border: 10px solid transparent;
     border-radius: 50px;
+    margin-top: 5%;
 }
+
+/* Styles */
+.admin a {
+    text-decoration: none;
+    color: #444444;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    background-color: #fff;
+    width: 200px;
+    height: 50px;
+    padding: 0 10px 0 10px;
+    display: inline-block;
+    margin: 20px 0;
+    border: 10px outset lightgray;
+    border-radius: 20px;
+}
+.admin a:active {
+    border: 10px inset lightgray;
+}
+
+/* Upload Page Styles */
+.upload input[type=text], textarea {
+    display: block;
+}
+
+
+
 /* Form Validation Styles*/
 
 .css-form input.ng-pristine, textarea.ng-pristine {
-    background-color: blueviolet;
+    background-color: #f3faff;
 }
 
-.css-form textarea.ng-dirty{
-    background-color: lightcyan;
 
+
+input.ng-valid, textarea.ng-valid {
+    background-color: #baf8ba;
 }
 
-input[type=text].ng-valid {
-    background-color: greenyellow;
-}
-
-input[type=text].ng-invalid, textarea.ng-invalid {
-background-color: red;
+input[type=text].ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty {
+background-color: indianred;
 }

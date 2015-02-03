@@ -19,8 +19,8 @@ router.post('/', function (req, res) {
 
 
         fs.writeFile('public/data/itemInfo.json', JSON.stringify(itemInfo), function () { /*Write extended object to JSON file*/
+            res.render('adminDelete', {title: 'adminDelete'}); /* TODO fix! */
             res.end();
-
         });
 
     });

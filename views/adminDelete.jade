@@ -1,7 +1,9 @@
 extends layout
 
 block content
+  .container
     .row(ng-controller="myController")
+        h1 Delete
         .col-lg-10(ng-repeat="item in items")
             p {{item.title}}
-            button(ng-model="item.title" ng-click="itemDelete(item.title)") sooo freaking cool!
+            button(ng-model="item.title" ng-click="itemDelete(item.title)") X

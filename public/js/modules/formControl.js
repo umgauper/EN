@@ -21,6 +21,8 @@ angular.module('formControl', [])
                 alert("You must select at least 1 file!")
             }
             else if (validity) {
+                if(confirm("Are you sure you want to upload this item?")) {
+
                 var fd = new FormData();
                 fd.append('title', form.title);
                 fd.append('description', form.description);
@@ -38,6 +40,7 @@ angular.module('formControl', [])
                     .success(function (d) {
                         console.log(d);
                     })
+                }
             }
         };
     //$scope.submit = function(formData, validity) {

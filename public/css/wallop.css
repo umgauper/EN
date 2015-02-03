@@ -3,13 +3,11 @@
     border-radius: 20px;
     box-shadow: rgb(211, 211, 211) 10px 10px 0 0;
 }
-
 .wallop-slider {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
-
 .wallop-slider__list { /* The ul containing the li of imgs */
     list-style: none;
     width: 100%;
@@ -20,7 +18,6 @@
     position: relative;
     overflow: hidden;
 }
-
 .wallop-slider__item { /*TODO: get landscaped images to center vertically!*/
     height: 400px;
     width: 100%;
@@ -35,7 +32,6 @@
     width: 90%;
     vertical-align: middle;
 }
-
 .wallop-slider__item--current {
     display: block;
     position: static;
@@ -51,7 +47,6 @@
     background: url(icons/controls.png) 0 -32px;
     background-repeat: no-repeat;
 }
-
 .btn--next {
     width: 33px;
     height: 33px;
@@ -59,23 +54,19 @@
     background-repeat: no-repeat;
     margin-left: 5px;
 }
-
 .btn--previous:hover {
     height: 33px;
     width: 33px;
     background-position: 0 0;
     background-repeat: no-repeat;
 }
-
 .btn--next:hover {
     height: 33px;
     width: 33px;
     background-position: -43px 0;
     background-repeat: no-repeat;
 }
-
-
-/*==========  SPECIAL CONFIG  ==========*/
+/*========== SPECIAL CONFIG ==========*/
 .wallop-slider--rotate .wallop-slider__item--hide-previous,
 .wallop-slider--rotate .wallop-slider__item--hide-next {
     display: block;
@@ -92,13 +83,11 @@
     -ms-animation: rotateToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
     animation: rotateToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
-
-/*==========  SPCECIAL ANIMATIONS  ==========*/
+/*========== SPCECIAL ANIMATIONS ==========*/
 @-webkit-keyframes rotateToLeft {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg);
@@ -107,12 +96,10 @@
         transform: translate3d(-100%, 0, 0) rotate(90deg);
     }
 }
-
 @-moz-keyframes rotateToLeft {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg);
@@ -121,12 +108,10 @@
         transform: translate3d(-100%, 0, 0) rotate(90deg);
     }
 }
-
 @-ms-keyframes rotateToLeft {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg);
@@ -135,12 +120,10 @@
         transform: translate3d(-100%, 0, 0) rotate(90deg);
     }
 }
-
 @keyframes rotateToLeft {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg);
@@ -149,12 +132,10 @@
         transform: translate3d(-100%, 0, 0) rotate(90deg);
     }
 }
-
 @-webkit-keyframes rotateToRight {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg);
@@ -163,12 +144,10 @@
         transform: translate3d(100%, 0, 0) rotate(-90deg);
     }
 }
-
 @-moz-keyframes rotateToRight {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg);
@@ -177,12 +156,10 @@
         transform: translate3d(100%, 0, 0) rotate(-90deg);
     }
 }
-
 @-ms-keyframes rotateToRight {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg);
@@ -191,12 +168,10 @@
         transform: translate3d(100%, 0, 0) rotate(-90deg);
     }
 }
-
 @keyframes rotateToRight {
     99% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg);

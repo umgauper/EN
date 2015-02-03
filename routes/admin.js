@@ -5,10 +5,10 @@ var fs = require('fs');
 var extend = require('extend');
 
 /* GET admin page */
-router.get('/', function(req, res) {
+router.get('/', function(req, res) { /* make password and login , but keep it on server side restricted code & don't upload to GitHub...
+                                      store correct login in local storage, and restrict routes to /admin /upload /delete etc (see http://stackoverflow.com/questions/9609325/node-js-express-js-user-permission-security-model) */
     res.render('admin', {title: 'Administration'});
 });
 
-//TODO: add DELETE method for removing items from itemInfo.json! maybe list out each object in items array ... with DELETE button? on /delete route
 
 module.exports = router;
