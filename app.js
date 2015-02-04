@@ -16,7 +16,7 @@ var deleteItem = require('./routes/deleteItem');
 
 var app = express();
 // start the server
-http.createServer(app).listen(3000);
+//http.createServer(app).listen(3000);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
